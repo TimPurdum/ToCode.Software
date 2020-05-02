@@ -9,3 +9,5 @@ C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloW
 C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.AssemblyInfo.cs
 C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.dll
 C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.pdb
+C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csproj.CoreCompileInputs.cache
+C:\git\ToCode.Software\ToCode.Software\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.genruntimeconfig.cache

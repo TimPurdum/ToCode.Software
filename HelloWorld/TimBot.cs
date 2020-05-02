@@ -10,6 +10,7 @@ namespace HelloWorld
             Console.WriteLine("Why did you wake me up?");
             var response = Console.ReadLine();
             Console.WriteLine($"{response} is not a good reason.");
+            Console.WriteLine("You lose");
         }
     }
 }
