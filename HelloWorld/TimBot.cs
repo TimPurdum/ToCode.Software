@@ -6,7 +6,7 @@ namespace HelloWorld
     {
         public void Start()
         {
-          
+          Console.WriteLine("Hello from TimBot.");
         }
     }
 }
