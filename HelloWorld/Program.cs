@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace HelloWorld
 {
@@ -6,29 +6,31 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the MultiPlex 2000!");
-            Console.WriteLine("Who's bot would you like to talk to?");
-            var response = Console.ReadLine();
-            if (response.ToLower() == "makiah")
-            {
-                TalkToMakiah();
-            }
-            else if (response.ToLower() == "aylah")
-            {
-                TalkToAylah();
-            }
-            else if (response.ToLower() == "elliot")
-            {
-                TalkToElliot();
-            }
-            else if (response.ToLower() == "michael")
-            {
-                TalkToMichael();
-            }
-            else
-            {
-                Console.WriteLine($"Sorry, no bots by the name {response} here!");	
-            }
+            var game = new Game();
+            game.Start();
+            // Console.WriteLine("Welcome to the MultiPlex 2000!");
+            // Console.WriteLine("Who's bot would you like to talk to?");
+            // var response = Console.ReadLine();
+            // if (response.ToLower() == "makiah")
+            // {
+            //     TalkToMakiah();
+            // }
+            // else if (response.ToLower() == "aylah")
+            // {
+            //     TalkToAylah();
+            // }
+            // else if (response.ToLower() == "elliot")
+            // {
+            //     TalkToElliot();
+            // }
+            // else if (response.ToLower() == "michael")
+            // {
+            //     TalkToMichael();
+            // }
+            // else
+            // {
+            //     Console.WriteLine($"Sorry, no bots by the name {response} here!");	
+            // }
         }
 
         static void TalkToMakiah()
