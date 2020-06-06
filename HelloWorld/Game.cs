@@ -7,6 +7,7 @@ namespace HelloWorld
     {
         public void Start()
         {
+            _currentRoom = Rooms.FirstRoom;
             while (true)
             {
                 GetData();
@@ -17,21 +18,44 @@ namespace HelloWorld
         public void GetData()
         {
             // a question or statement
-            Console.WriteLine("What do you want to do?");
+            Console.WriteLine(_currentRoom.WelcomeMessage);
+            Console.WriteLine("Where do you want to go? (Enter north, south, east or west)");
 
             // user gives input
             var response = Console.ReadLine();
 
-            if (response == "room")
+            Room newRoom = null;
+            switch (response.ToString().ToLower())
             {
-                var room = new Room();
-                room.WelcomeMessage = "You enter a small, dark room.";
-                Console.WriteLine(room.WelcomeMessage);
+                case "east":
+                    newRoom = NavigationManager.MoveEast(_currentRoom);
+                    break;
+                case "west":
+                    newRoom = NavigationManager.MoveWest(_currentRoom);
+                    break;
+                case "north":
+                    newRoom = NavigationManager.MoveNorth(_currentRoom);
+                    break;
+                case "south":
+                    newRoom = NavigationManager.MoveSouth(_currentRoom);
+                    break;
+                default:
+                    Console.WriteLine("I don't understand");
+                    break;
             }
-            // do something with the response
-            Console.WriteLine("Really? I want to do that too.");
 
-            Thread.Sleep(4000);
+            if (newRoom == null)
+            {
+                Console.WriteLine("There's no door in that direction.");
+            }
+            else
+            {
+                _currentRoom = newRoom;
+            }
+
+            Thread.Sleep(1000);
         }
+
+        private Room _currentRoom;
     }
 }

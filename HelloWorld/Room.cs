@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Drawing;
 using System;
 // using System.Drawing;
 
@@ -9,6 +10,6 @@ namespace HelloWorld
     {
         public List<Item> Items { get; set; }
         public string WelcomeMessage { get; set; }
-        // public Point Position { get; set; }   
+        public Point Position { get; set; }   
     }
 }
